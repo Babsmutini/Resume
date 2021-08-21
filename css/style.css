@@ -1,6 +1,9 @@
-@import
- url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+/* @import
+ url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"); */
 
+ @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700&display=swap');
+ 
+ 
 *{
     margin: 0;
     padding: 0;
@@ -20,38 +23,47 @@ body {
 h1{
     color: #fff;
     text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+
+section{
+    padding: 10px 0 10px 0;
 }
 
 small{
     color: #FFFFFF;
 }
 
+p{
+    color: #949495;
+    font-size: 18px;
+}
+
+span{
+    color: white;
+
+}
 
 .container{
     padding: 0 15px 0 15px;
 }
-section{
-    padding: 10px 0 10px 0;
-}
+
 .resume{
     display: flex;
     height: auto;
     flex-direction: row;
     order: 2;
-    padding: 30px;
+    padding: 85px;
 }
-.resume_left h3{
-    color: #fff;
-}
+
 
 .resume_left{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    width: 60%;
+    width: 40%;
     height: 100vh;
-
 }
 
 .resume_left_container{
@@ -60,16 +72,37 @@ section{
     justify-content: space-between;
     flex-grow: 1;
 }
+
+.hero h1{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.hero p{
+    padding-top: 50px;
+    padding-right: 100px;
+    font-size: 17px;
+}
+
 .resume_left_footer > ul{
     display: flex;
     flex-wrap: wrap;
     padding: 5px 0 5px 0;
-   
+    padding-bottom: 50px;
 }
 
-/* .resume_left_footer{
-    padding-bottom: 80px;
-} */
+.resume_left_footer  .contact{
+    /* color: white; */
+    align-items: center;
+    font-size: 1.2em;
+    padding-right: 5px;
+}
+
+.resume_left_footer .contact li  a{
+    color: white;
+}
 
 .resume_left_footer  ul  li  div img{
     width: 40px;
@@ -86,34 +119,30 @@ section{
 }
 .resume_left_footer a{
     color: inherit;
+    text-decoration: none;
 }
 
 .resume_left_footer a:hover{
     color: white;
 }
 
-.resume_left_footer .contact{
- display: inline-flex;
-}
-
 .resume_left_footer > ul:last-of-type{
     margin-bottom: 80px;
 }
-
-
 .resume_right{
     display: flex;
     position: relative;
     width: 50%;
-    overflow-y: auto;
-    height: 100vh;
+    overflow-y:scroll;
+    height: 90vh;
+    margin-left: 15em;
     background-color: #16161A;
 }
 .resume_right .hidden{
     display: none;
 }
-.resume_right small{
-    font-size: 13px;
+.resume_right-details p{
+    font-size: 20px;
 }
 .resume .resume_right{
    display: flex;
@@ -124,6 +153,15 @@ section{
 .resume_right-details{
     padding-left: 15px;
     padding-bottom: 20px;
+}
+.resume_right-details h1{
+    font-weight: 500;
+}
+.resume_right-details h3{
+    color: #fff;
+    padding-top: 1em;
+    font-weight: 300;
+    font-size: 20px;
 }
 .resume_right-details h4{
     padding-bottom: 10px;
@@ -136,23 +174,66 @@ section{
    color: #F5F5F5;
     
 }
-.resume_right-details small{
-     padding: 0; 
-     color:  #555555;
+.resume_right-details ul{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.resume_right-details ul li{
+    list-style-type: square;
+    color:  #555555;
+    font-size: 18px;
    
+}
+.date{
+    font-size: 12px!important;
 }
 
 /* Media queries */
 @media only screen and (max-width: 600px) {
+    body{
+        overflow: visible;
+    }
+    .resume{
+        padding: 5px;
+        flex-direction: column;
+    }
     .resume_left{
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: auto;
     }
     .resume_right{
+        height: auto;
         width: 100%;
+        overflow-y:none;
+        margin-left: 0;
     }
     .resume_right .hidden{
         display: block;
         padding-bottom: 20px;
         line-height: 1;
+    }
+    .hidden .hidden_contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        color: #949495;
+       font-size: 18px;
+      
+    }
+    .hidden_contact .icon{
+        padding: 10px 0 0 0 ;
+    }
+    
+    .hidden_contact a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .hidden_contact a:hover{
+        color: #fff;
     }
   }
